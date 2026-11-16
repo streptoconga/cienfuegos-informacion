@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#164e63">
+  <meta name="description" content="Prototipo académico informativo de prestaciones, programas y actividades del CESFAM Profesor Eugenio Cienfuegos.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Cienfuegos Informa · Prototipo académico</title>
+  <link rel="icon" href="./icons/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="notice"><div class="container notice-inner"><span aria-hidden="true">◆</span> PROTOTIPO ACADÉMICO · NO ES UN CANAL OFICIAL DEL CESFAM <span class="notice-optional">· Información sujeta a validación institucional</span></div></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Cienfuegos Informa, ir al inicio">
+        <div class="brand-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 6v36M6 24h36" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="24" cy="24" r="6" fill="#d1fae5"/></svg></div>
+        <div><strong>Cienfuegos <em>Informa</em></strong><small>CESFAM Profesor Eugenio Cienfuegos · Viña del Mar</small></div>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#prestaciones">Prestaciones</a><a href="#orientacion">Orientación</a><a href="#proyecto">Proyecto</a></nav>
+      <button id="menuBtn" class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileNav">☰ <span>Menú</span></button>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" hidden aria-label="Navegación móvil"><a href="#inicio">Inicio</a><a href="#prestaciones">Prestaciones</a><a href="#orientacion">Orientación</a><a href="#proyecto">Proyecto</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Toda la información, en un mismo lugar</div>
+          <h1 id="hero-title">Tu CESFAM,<br><span>más cerca de ti.</span></h1>
+          <p>Explora las prestaciones, programas y unidades del centro de salud con información organizada y fácil de consultar.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#prestaciones">Explorar prestaciones <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#orientacion">¿Necesitas orientación?</a></div>
+          <div class="hero-disclaimer"><span aria-hidden="true">ⓘ</span> Este sitio es una demostración. Los horarios, requisitos y contactos no están confirmados.</div>
+        </div>
+        <div class="hero-art" aria-label="Vista ilustrativa de tres pasos de información">
+          <div class="hero-glow"></div>
+          <div class="art-panel panel-top"><span class="panel-icon">🩺</span><div><strong>Programas de salud</strong><small>Por etapa de vida</small></div><span class="panel-arrow">↗</span></div>
+          <div class="art-panel panel-main"><span class="panel-tag">Información centralizada</span><div class="panel-search">⌕ <span>¿Qué necesitas encontrar?</span></div><div class="mini-cards"><div><span>💉</span>Vacunatorio</div><div><span>👴</span>Personas mayores</div><div><span>💬</span>Orientación</div></div></div>
+          <div class="art-panel panel-bottom"><span class="check-circle">✓</span><div><strong>Acceso más simple</strong><small>Diseñado para toda la comunidad</small></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="status-band" aria-label="Estado de la información"><div class="container status-band-inner"><div><span class="status-label">Estado del contenido</span><strong>En revisión institucional</strong></div><p>La presencia de un servicio en este catálogo es referencial. Confirma los detalles directamente con el CESFAM.</p><span class="status-pill">Prototipo v1.0</span></div></section>
+
+    <section class="section catalog" id="prestaciones" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading"><div><span class="section-kicker">DESCUBRE TU CENTRO DE SALUD</span><h2 id="services-title">¿Qué necesitas encontrar?</h2><p>Busca por nombre, etapa de vida o tipo de prestación.</p></div><span id="resultCount" class="count-chip" aria-live="polite"></span></div>
+        <div class="search-wrap"><label for="searchInput" class="visually-hidden">Buscar prestaciones</label><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Ej.: vacunas, adulto mayor, salud mental..." autocomplete="off"><button id="clearSearch" type="button" aria-label="Borrar búsqueda" hidden>✕</button></div>
+        <div class="filter-row" id="filters" role="group" aria-label="Filtrar prestaciones">
+          <button class="filter active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter" type="button" data-filter="programas" aria-pressed="false">Programas de salud</button>
+          <button class="filter" type="button" data-filter="unidades" aria-pressed="false">Unidades y servicios</button>
+          <button class="filter" type="button" data-filter="orientacion" aria-pressed="false">Orientación</button>
+          <button class="filter" type="button" data-filter="favoritos" aria-pressed="false">★ Guardados</button>
+        </div>
+        <div id="cardGrid" class="card-grid" aria-live="polite"></div>
+        <div id="emptyState" class="empty-state" hidden><span aria-hidden="true">⌕</span><h3>No encontramos resultados</h3><p>Prueba con otra palabra o elige la categoría «Todos».</p><button type="button" class="button button-primary" id="resetFilters">Ver todas las prestaciones</button></div>
+      </div>
+    </section>
+
+    <section class="section guide-section" id="orientacion" aria-labelledby="guide-title"><div class="container">
+      <div class="section-heading"><div><span class="section-kicker">TE ACOMPAÑAMOS</span><h2 id="guide-title">Orientación simple, paso a paso</h2><p>Una guía general para ayudarte a encontrar información.</p></div></div>
+      <div class="steps-grid"><article class="step-card"><div class="step-number">01</div><div class="step-icon" aria-hidden="true">🔎</div><h3>Busca lo que necesitas</h3><p>Escribe una palabra en el buscador o explora las categorías disponibles.</p></article><article class="step-card"><div class="step-number">02</div><div class="step-icon" aria-hidden="true">📋</div><h3>Revisa la información</h3><p>Consulta una descripción general. Los requisitos, horarios y contactos se indicarán cuando estén validados.</p></article><article class="step-card"><div class="step-number">03</div><div class="step-icon" aria-hidden="true">💬</div><h3>Confirma con tu CESFAM</h3><p>Si tienes dudas, consulta directamente en SOME u OIRS del establecimiento.</p></article></div>
+      <div class="important-box"><div aria-hidden="true" class="important-icon">!</div><div><strong>Importante sobre la atención</strong><p>Este prototipo es exclusivamente informativo: <b>no agenda horas, no consulta fichas clínicas y no reemplaza la orientación presencial ni la atención de urgencia</b>. Ante una emergencia de salud, utiliza los canales oficiales de emergencia.</p></div></div>
+      <div class="faq-grid"><div><span class="section-kicker">PREGUNTAS FRECUENTES</span><h3>Respuestas claras, sin complicaciones.</h3></div><div class="faq-list"><details><summary>¿Puedo reservar una hora aquí?<span>+</span></summary><p>No. Esta aplicación fue concebida únicamente para consultar información sobre programas, prestaciones y actividades.</p></details><details><summary>¿Los horarios publicados están confirmados?<span>+</span></summary><p>No. Los horarios y requisitos aparecen como pendientes hasta recibir validación institucional.</p></details><details><summary>¿Necesito crear una cuenta?<span>+</span></summary><p>No. Puedes explorar este prototipo sin registrarte ni entregar datos personales.</p></details><details><summary>¿Qué ocurre si no manejo bien la tecnología?<span>+</span></summary><p>La propuesta contempla capacitación inicial de funcionarios referentes y mantener disponible la orientación presencial.</p></details></div></div>
+    </div></section>
+
+    <section class="section about-section" id="proyecto" aria-labelledby="project-title"><div class="container about-grid"><div><span class="section-kicker">SOBRE ESTA INICIATIVA</span><h2 id="project-title">Una propuesta para acercar la información a la comunidad.</h2><p>Prototipo académico del proyecto de mejora de calidad del CESFAM Profesor Eugenio Cienfuegos, desarrollado para explorar una estrategia de centralización de información institucional.</p><p>Su puesta en marcha está condicionada a revisión, validación de contenidos, factibilidad técnica y autorización del establecimiento.</p><div class="about-tags"><span>Accesibilidad</span><span>Información clara</span><span>Orientación usuaria</span><span>Capacitación interna</span></div></div><div class="about-panel"><div class="about-label">ETAPAS PROPUESTAS</div><ol><li><span>1</span><div><strong>Diseño del prototipo</strong><small>Demostración de estructura y navegación</small></div><b class="phase-badge">En desarrollo</b></li><li><span>2</span><div><strong>Validación institucional</strong><small>Revisión de servicios, horarios y requisitos</small></div><b class="phase-badge pending">Pendiente</b></li><li><span>3</span><div><strong>Capacitación de referentes</strong><small>Prioridad inicial en sectores y unidades</small></div><b class="phase-badge pending">Pendiente</b></li><li><span>4</span><div><strong>Evaluación del piloto</strong><small>Uso, comprensión y mejoras necesarias</small></div><b class="phase-badge pending">Pendiente</b></li></ol></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><div><strong>Cienfuegos <em>Informa</em></strong><p>Prototipo académico · CESFAM Profesor Eugenio Cienfuegos · Viña del Mar, Chile</p></div><div><p>© 2026 · Proyecto académico de gestión en APS</p><p>No afiliado oficialmente al CESFAM mientras no exista validación institucional.</p></div></div></footer>
+  <div class="bottom-nav" aria-label="Navegación rápida"><a href="#inicio"><span>⌂</span>Inicio</a><a href="#prestaciones"><span>▦</span>Prestaciones</a><a href="#orientacion"><span>?</span>Orientación</a><a href="#proyecto"><span>ⓘ</span>Proyecto</a></div>
+
+  <dialog id="serviceDialog" aria-labelledby="dialogTitle"><div class="modal-header"><span class="modal-kicker">FICHA INFORMATIVA · PROTOTIPO</span><button id="closeDialog" type="button" aria-label="Cerrar ficha" class="close-modal">✕</button></div><div class="modal-content"><div class="modal-title-row"><div class="modal-symbol" id="dialogIcon" aria-hidden="true"></div><div><div id="dialogCategory" class="card-category"></div><h2 id="dialogTitle"></h2></div></div><p id="dialogDescription" class="modal-description"></p><div class="verify-box"><strong>◌ Pendiente de validación institucional</strong><p>Confirma estos antecedentes con el establecimiento antes de utilizarlos como información oficial.</p></div><div class="detail-list"><div><span>Horario de atención</span><strong>Pendiente de validar</strong></div><div><span>Requisitos y acceso</span><strong>Pendiente de validar</strong></div><div><span>Ubicación / contacto</span><strong>Pendiente de validar</strong></div></div><button id="dialogFavorite" type="button" class="button button-outline">☆ Guardar prestación</button></div></dialog>
+  <noscript><p class="noscript">Para utilizar el buscador de prestaciones, activa JavaScript en tu navegador.</p></noscript>
+</body>
+</html>
