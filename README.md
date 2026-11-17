@@ -78,3 +78,21 @@ La existencia de un recurso nacional no indica disponibilidad de prestaciones co
 - La tabla **no permite asegurar** horarios específicos de controles por profesional, entrega de números SOME, curaciones ni tratamientos individuales, por lo que esos datos siguen pendientes de confirmación.
 - Se distingue expresamente que la atención médica del sábado figura 08:00–12:00, mientras la atención general del sábado figura 09:00–13:00, sin reconciliar horarios de fuentes diferentes de forma especulativa.
 - La vigencia de todos los horarios debe ser validada por funcionarios responsables antes de divulgarse como información oficial.
+
+
+## Actualización v2.3 — Diseño blanco y logo en la raíz
+
+- Se recupera el blanco como color de fondo principal, con acentos celestes y verde agua.
+- La imagen del CESFAM está en `logo-cesfam.png` **junto a `index.html`**, no es necesario crear una carpeta especial.
+- Si el logo no aparece en GitHub Pages, revisa que exista `logo-cesfam.png` en la raíz del repositorio: `https://github.com/streptoconga/cienfuegos-informacion/blob/main/logo-cesfam.png`.
+- Los dos `<img>` de `index.html` utilizan `src="./logo-cesfam.png"`. GitHub distingue mayúsculas/minúsculas en los nombres.
+- La imagen es la referencia facilitada para el proyecto. Antes de difundir el prototipo como sitio institucional, confirma autorización del logo.
+- Actualiza `index.html`, `styles.css`, `sw.js`, `manifest.webmanifest` y **sube `logo-cesfam.png`**. Si el sitio muestra la versión anterior, realiza una recarga forzada o borra datos del sitio (debido a la memoria offline).
+
+
+## v2.4 — Contacto del vacunatorio
+
+- Se añade WhatsApp Vacunatorio: `+56 9 5694 3769` → `https://wa.me/56956943769`, tanto en Contacto como en la ficha de horarios del vacunatorio. Número proporcionado por la usuaria y pendiente de confirmación institucional antes de la difusión pública.
+- Diseño predominantemente blanco con acentos celeste y verde agua (desde v2.3).
+- El logo se encuentra en la raíz con nombre exacto **`logo-cesfam.png`**, junto con **`index.html`**. En GitHub, subir ambos archivos a la raíz y sobreescribir los ya existentes, además de actualizar los demás archivos del ZIP.
+- Se incrementó la versión de caché del service worker para que los visitantes reciban los cambios con la actualización del sitio.

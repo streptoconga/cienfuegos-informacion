@@ -76,3 +76,72 @@ body{background:#a4e8e7;color:var(--ink)}
 .service-hours-line b{font-weight:750}.service-hours-line span{text-align:right;font-weight:700;max-width:61%}
 .service-hours-card small{display:block;font-size:12px;color:#34636b;line-height:1.55;margin-top:10px}
 @media(max-width:670px){.service-hours-grid{grid-template-columns:1fr}.service-hours-line{font-size:13px}}
+
+
+/* v2.3 — Blanco protagonista + acentos celeste y verde agua. */
+:root {
+  --ink: #173e50;
+  --muted: #5e7580;
+  --teal: #087b8c;
+  --aqua: #1aaea4;
+  --mint: #ecfaf5;
+  --cream: #f7fcfd;
+  --border: #dbe9e8;
+  --white: #fff;
+  --shadow: 0 10px 28px rgba(21, 73, 91, .07);
+}
+body { background: #fff; color: var(--ink); }
+.site-header, .mobile-nav, .status-band { background: #fff; border-bottom-color: #e5eded; }
+.menu-btn, .bottom-nav { background: #fff; }
+.brand-logo { mix-blend-mode: normal; width: 142px; max-height: 76px; object-fit: contain; }
+.hero { background: linear-gradient(118deg, #ffffff 0%, #f1fafb 57%, #e9f8f3 100%); }
+.hero-logo { background: #fff; border: 1px solid #dfefed; box-shadow: 0 5px 18px rgba(16, 84, 101, .06); padding: 8px 12px; }
+.hero-logo img { mix-blend-mode: normal; }
+.eyebrow, .status-pill, .count-chip { background: #e7f7f3; border-color: #c6e9e3; color: #126d78; }
+.hero h1 { color: #183e52; }
+.hero h1 span { color: #119c96; }
+.hero-copy>p, .hero-disclaimer { color: #5d7580; }
+.button-primary { background: #0b8797; color: #fff; }
+.button-primary:hover { background: #066777; }
+.button-secondary, .button-outline { background: #fff; color: #116b78; border-color: #c4dfe0; }
+.art-panel { background: #fff; border-color: #dcebea; }
+.panel-search { background: #f5fafa; }
+.catalog, .contact-section, .about-section { background: #fff; }
+.guide-section, .resources-section { background: #f3fafb; }
+.hours-section { background: #f7fbfc; }
+.contact-card, .resource-card, .service-card, .step-card,
+.faq-list details, .about-panel, .service-hours-card, .sector-card {
+  background: #fff;
+  border-color: #ddeae9;
+  box-shadow: 0 5px 24px rgba(22, 83, 97, .05);
+}
+.contact-card:hover { background: #f3fcf9; }
+.contact-emoji, .resource-icon, .service-hours-icon,
+.service-emoji, .step-icon, .panel-icon { background: #e8f8f4; }
+.search-wrap, .resource-controls input, .resource-filter, .filter { background: #fff; border-color: #d6e5e7; }
+.resource-filter.active, .filter.active { background: #0e8190; color: #fff; border-color: #0e8190; }
+.resource-card p, .service-card p, .step-card p,
+.section-heading p { color: #597582; }
+.resource-card-foot { border-top-color: #e4eeee; }
+.resource-feature { background: linear-gradient(122deg, #087d92, #169e9e); }
+.resource-feature .button-primary { background: #fff; color: #08697a; }
+.resource-feature .button-outline { background: transparent; border-color: #a5e4dc; color: #fff; }
+.service-hours-card h3 { color: #164755; }
+.service-hours-line { border-top-color: #e1eceb; }
+.hours-overview { background: #e8f7f8; color: #174a57; box-shadow: none; border: 1px solid #cae7e7; }
+.hours-overview-heading small, .hours-overview>p { color: #4e7079; }
+.hours-summary>div { background: #fff; border-color: #d4e8e9; }
+.hours-summary span { color: #3e6a76; }
+.hours-summary strong { color: #154756; }
+.hours-footnote, .fineprint { color: #647a84; }
+.important-box { background: #eaf8f4; border-color: #d1e8e1; }
+.dialog-resource-links a { background: #e8f8f4; border-color: #c9e6df; }
+.footer { background: #164b5c; }
+.footer p { color: #d4e9e8; }
+.footer .made-with-love { color: #e1fffa; }
+@media (max-width: 980px) { .brand-logo { width: 115px; } }
+@media (max-width: 660px) { .brand-logo { width: 95px; } }
+
+/* v2.4 · Acceso directo a WhatsApp del vacunatorio */
+.hours-whatsapp { display:inline-flex; align-items:center; text-decoration:none; margin-top:12px; padding:10px 12px; border:1px solid #b7dfdb; background:#eaf8f5; color:#096a77; font-weight:780; font-size:12px; border-radius:11px; }
+.hours-whatsapp:hover,.hours-whatsapp:focus-visible{ background:#d4f1ea; outline-offset:3px; }
