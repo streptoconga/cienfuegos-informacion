@@ -11,25 +11,7 @@ Sitio web informativo y adaptable a celulares para el proyecto de mejora del **C
 - Interfaz adaptada a pantallas pequeñas, teclado y lectores de pantalla.
 - PWA instalable y disponible sin conexión después de la primera carga (según compatibilidad del navegador).
 
-## Publicar en GitHub Pages
 
-1. Inicia sesión en https://github.com y crea un repositorio **público**, por ejemplo `cienfuegos-informa`.
-2. Descomprime el archivo ZIP y sube **todos sus archivos y la carpeta `icons`** a la raíz del repositorio. El archivo `index.html` debe quedar en la raíz, NO dentro de una carpeta adicional.
-3. En el repositorio abre **Settings → Pages**.
-4. En **Build and deployment**, elige **Deploy from a branch**. Selecciona la rama `main` y la carpeta `/(root)`, luego **Save**.
-5. Abre la URL que aparece en **Pages**. Generalmente es `https://USUARIO.github.io/cienfuegos-informa/` (reemplaza `USUARIO`).
-
-Para pruebas locales, puedes abrir `index.html` directamente, excepto que la instalación/offline requiere HTTPS o localhost. Una alternativa local es ejecutar `python -m http.server 8000` y visitar `http://localhost:8000/`.
-
-## Personalizar la información
-
-Edita **`data.js`**, donde cada servicio incluye nombre, categoría, descripción y términos de búsqueda. Es contenido de demostración. Antes de hacer accesible esta app a usuarios reales:
-
-- Confirmar con la dirección y encargados cada prestación, condición de acceso, requisito, horario, sede, contacto y mecanismo de actualización.
-- Contar con autorización institucional para el uso del nombre/logo y difusión comunitaria.
-- Probar usabilidad con participantes que acepten voluntariamente, considerando diversidad de edades y habilidades digitales.
-- Asegurar un responsable de revisión de contenidos y fecha de actualización.
-- Respetar privacidad: **NO subir registros de pacientes, fichas, contraseñas ni documentos internos** a GitHub. GitHub Pages suele ser públicamente accesible, incluso si el repositorio es privado según el plan.
 
 ## Alcance e indicadores posibles para el informe
 
@@ -58,8 +40,6 @@ Edita **`data.js`**, donde cada servicio incluye nombre, categoría, descripció
 - Crédito de autoría al pie.
 
 **Edición de recursos:** `recursos.js` tiene títulos, descripciones, URLs, tipo y agrupación. `data.js` mantiene el catálogo local de prestaciones, aún sujeto a validación del CESFAM.
-
-**Publicación:** descomprime el ZIP y sube todos los archivos y carpetas a la raíz del repositorio en GitHub. Conserva `index.html` en la raíz. Activar Pages → main → /(root). Para actualizar la versión anterior, usa `Add file → Upload files` y confirma la sustitución de los archivos ya existentes. Sube también las carpetas `assets`, `documentos` e `icons` completas.
 
 La existencia de un recurso nacional no indica disponibilidad de prestaciones concretas en el CESFAM. Enlace externo puede cambiar sin aviso. Este sitio no está autorizado como canal oficial, no entrega atención clínica ni agenda horas.
 
