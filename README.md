@@ -47,3 +47,34 @@ Edita **`data.js`**, donde cada servicio incluye nombre, categoría, descripció
 - `.nojekyll`: evita procesamiento de Jekyll.
 
 **Proyecto exclusivamente académico. No reemplaza información ni orientación oficial del CESFAM.**
+
+
+## Contenido de la versión 2.0 (16/11/2026)
+
+- Biblioteca de fuentes nacionales oficiales de APS, Fonasa, GES, infancia, PNI, salud mental, crónicas y derechos; un recurso académico de CEDETi UC.
+- Calendario PNI 2026 en `documentos/calendario-pni-2026.pdf` (aportado por el usuario) y enlace a calendario actualizado.
+- Enlaces a Instagram, WhatsApp Morbilidad Médica (`https://wa.me/56974109445`) y SOME Virtual (`https://wa.me/56974106904`), transcritos de un afiche proporcionado. Confirmar vigencia con el CESFAM antes de difusión oficial.
+- Diseño turquesa, celeste y verde agua. Logo en `assets/logo-cesfam-referencia.png` basado en fotografía proporcionada.
+- Crédito de autoría al pie.
+
+**Edición de recursos:** `recursos.js` tiene títulos, descripciones, URLs, tipo y agrupación. `data.js` mantiene el catálogo local de prestaciones, aún sujeto a validación del CESFAM.
+
+**Publicación:** descomprime el ZIP y sube todos los archivos y carpetas a la raíz del repositorio en GitHub. Conserva `index.html` en la raíz. Activar Pages → main → /(root). Para actualizar la versión anterior, usa `Add file → Upload files` y confirma la sustitución de los archivos ya existentes. Sube también las carpetas `assets`, `documentos` e `icons` completas.
+
+La existencia de un recurso nacional no indica disponibilidad de prestaciones concretas en el CESFAM. Enlace externo puede cambiar sin aviso. Este sitio no está autorizado como canal oficial, no entrega atención clínica ni agenda horas.
+
+
+## Actualización v2.1 (16/11/2026)
+
+- Nuevo recurso «Guías anticipatorias para la adolescencia», PDF del MINSAL para tres grupos de edad: 10–13, 14–16 y 17–19 años. El documento es material educativo de consulta; sus recomendaciones deben contrastarse con orientaciones actuales si se utilizan en atención.
+- Nueva sección «Horarios» con tres tarjetas: sector amarillo, sector azul, sector rojo. Los horarios **individuales están pendientes de confirmación**: no se deducen del horario general del centro.
+- Horario general de referencia tomado de la Tabla 1 del diagnóstico institucional 2026: lunes a viernes, 08:00 a 20:00; sábado, 09:00 a 13:00. No garantiza que cada prestación o profesional atienda durante toda esa franja, ni sustituye una confirmación actualizada con SOME.
+- Para completar horarios reales por sector, actualiza las tres tarjetas de `index.html` tras obtener fuente oficial y fecha de validación. Evita publicar agendas particulares de pacientes o funcionarios.
+
+
+## Actualización v2.2 — Horarios por servicio
+
+- Se reemplazaron las tres tarjetas de sector territorial por **horarios por servicio**, según la tabla institucional de 2026 proporcionada por la autora: consultas/odontología/SOME/botiquín, OIRS, PNAC/PACAM, toma de muestras y procedimientos, vacunatorio, atención vespertina, atención médica sábados y tardes protegidas.
+- La tabla **no permite asegurar** horarios específicos de controles por profesional, entrega de números SOME, curaciones ni tratamientos individuales, por lo que esos datos siguen pendientes de confirmación.
+- Se distingue expresamente que la atención médica del sábado figura 08:00–12:00, mientras la atención general del sábado figura 09:00–13:00, sin reconciliar horarios de fuentes diferentes de forma especulativa.
+- La vigencia de todos los horarios debe ser validada por funcionarios responsables antes de divulgarse como información oficial.

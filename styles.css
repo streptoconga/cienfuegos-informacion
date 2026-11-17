@@ -4,3 +4,75 @@
 @media(max-width:760px){.container{width:min(100% - 32px,580px)}.header-inner{min-height:72px}.brand-icon{width:39px;height:39px}.brand strong{font-size:17px}.brand small{font-size:9px}.desktop-nav{display:none}.menu-btn{display:block}.hero-grid{grid-template-columns:1fr;min-height:0}.hero-copy{padding:48px 0 50px}.hero h1{font-size:clamp(39px,10vw,56px)}.hero-art{display:none}.notice{font-size:9px}.notice-optional{display:none}.status-band-inner{flex-wrap:wrap;gap:5px;padding:16px 0}.status-band-inner>div{min-width:0;width:100%}.status-band p{width:100%;flex:auto;margin:2px 0 6px}.status-pill{display:none}.section{padding:65px 0}.section-heading{align-items:start}.section h2{font-size:30px}.card-grid,.steps-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-card{padding:18px;min-height:265px}.service-card h3{font-size:16px}.service-card p{font-size:12px}.card-footer{flex-wrap:wrap}.faq-grid,.about-grid{grid-template-columns:1fr;gap:25px}.faq-grid h3{font-size:28px}.about-grid h2{max-width:650px}.footer{padding-bottom:96px}.footer-inner{display:block}.footer-inner>div:last-child{text-align:left}.bottom-nav{position:fixed;bottom:0;z-index:9;display:flex;justify-content:space-around;align-items:center;width:100%;height:66px;box-shadow:0 -8px 32px rgba(21,62,78,.11);background:#fff;border-top:1px solid #e9f0ed;padding-bottom:env(safe-area-inset-bottom)}.bottom-nav a{display:flex;flex:1;align-items:center;flex-direction:column;gap:0;font-size:10px;font-weight:750;color:#54717c}.bottom-nav a span{font-size:22px;color:#2c9483}.important-box{margin-bottom:50px}}
 @media(max-width:480px){.hero-actions .button{font-size:12px;padding:12px 14px}.card-grid,.steps-grid{grid-template-columns:1fr}.service-card{min-height:240px}.card-footer{flex-wrap:nowrap}.service-card p{max-width:430px}.section-heading{display:block}.count-chip{display:inline-block;margin-top:18px}.filter-row{gap:7px}.filter{padding:8px 11px;font-size:11px}.important-box{padding:18px 14px}.status-band-inner>div{display:flex;gap:10px;align-items:center}.status-label{font-size:9px}.footer p{line-height:1.6}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Versión 2.0 · paleta turquesa/celeste/verde agua. Superficies sin blanco puro. */
+:root{--ink:#124654;--muted:#316874;--teal:#096c7b;--aqua:#19b9be;--mint:#d2f8eb;--cream:#aee9e8;--border:#6ecfc9;--white:#c2f5ee;--shadow:0 14px 38px rgba(11,101,115,.14)}
+body{background:#a4e8e7;color:var(--ink)}
+.site-header{background:#8adbd9;border-bottom:1px solid #59c7c7}
+.header-inner{min-height:90px}
+.brand-logo{width:142px;max-height:67px;object-fit:contain;mix-blend-mode:multiply;flex-shrink:0}
+.brand strong{color:#0d5364}.brand strong em{color:#067e7d}.brand small{color:#2e6b76}
+.desktop-nav{gap:19px}.desktop-nav a{color:#19586c}
+.mobile-nav{background:#b8eeeb}.menu-btn{background:#b2f0e8}
+.hero{background:linear-gradient(118deg,#4fc7d5 0%,#77dad9 48%,#9be5ce 100%)}
+.hero-logo{display:inline-flex;max-width:285px;max-height:112px;margin:0 0 14px;padding:6px 12px;border-radius:18px;background:rgba(177,238,229,.45)}
+.hero-logo img{width:100%;height:auto;object-fit:contain;mix-blend-mode:multiply}
+.eyebrow{background:#b9f0e3;border-color:#62c8c5;color:#125f6b}
+.hero h1{color:#103e52}.hero h1 span{color:#066c79}.hero-copy>p{color:#1f5265}
+.hero-disclaimer{color:#225665}.button-primary{background:#066779;color:#effffa}.button-primary:hover{background:#064f5d}
+.button-secondary,.button-outline{background:#b9efe9;color:#114e62;border-color:#6accc9}
+.hero-glow{background:radial-gradient(circle,rgba(10,125,129,.25),transparent 70%)}
+.art-panel{background:#b5f1e7;border-color:#7bdbcf;box-shadow:0 17px 50px rgba(19,115,120,.15)}
+.panel-search,.mini-cards div,.panel-icon{background:#d4f7ed}
+.status-band{background:#80d7d7;border-bottom-color:#59c6c6}.status-band p,.status-label{color:#24596a}.status-pill,.count-chip{background:#c0f0e7;color:#155a65}
+.catalog{background:#a8e7e7}.guide-section{background:#86d9db}.about-section{background:#a5e4e1}
+.section h2{color:#105262}.section-heading p,.service-card p,.step-card p{color:#346876}.section-kicker{color:#096c79}
+.search-wrap,.service-card,.step-card,.faq-list details,.about-panel{background:#cef4ef;border-color:#88d4ca}
+.filter{background:#c2efe9;border-color:#83c9c6;color:#1d5c67}.filter.active{background:#087687;border-color:#087687;color:#efffff}
+.service-emoji,.step-icon,.mini-cards div{background:#a2e9e2}.card-category,.card-link{color:#067783}
+.card-footer{border-top-color:#8acec9}.validation-mini{color:#70531f}.validation-mini span{color:#a77b23}
+.important-box{background:#b8efe4;border-color:#6dc8bf}.important-box p{color:#2d626b}
+.footer{background:#0c5b6a}.footer p{color:#c1e8e6}.footer .made-with-love{color:#fff4cb;font-size:14px;font-weight:780;letter-spacing:.005em}
+.bottom-nav{background:#b7eeea;border-top:1px solid #85d2c9}
+.brand-icon{background:#096e7e}.notice{background:#0a6670}
+.contact-section{background:linear-gradient(135deg,#89e0df,#a4eddb);padding:52px 0}
+.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.contact-card{display:flex;align-items:center;gap:12px;background:#c4f4e9;padding:19px;border:1px solid #78d1cb;border-radius:18px;box-shadow:0 8px 18px rgba(18,102,105,.08);transition:transform .18s}
+.contact-card:hover{transform:translateY(-3px);background:#d9f8ed}.contact-emoji{font-size:25px;background:#a2e5dc;border-radius:12px;padding:8px}.contact-card strong{display:block;font-size:14px;line-height:1.25}.contact-card small{display:block;color:#396b73;font-size:11px;margin-top:7px}.contact-arrow{margin-left:auto;font-weight:900;color:#08798a}
+.resources-section{background:linear-gradient(180deg,#8bdcdf,#b5eee5);padding:76px 0 84px}
+.resource-feature{display:flex;align-items:center;gap:20px;background:linear-gradient(120deg,#0d8291,#0b6c7b);color:#effffb;padding:23px;border-radius:21px;margin:22px 0 27px;box-shadow:0 15px 35px rgba(15,104,114,.18)}
+.resource-feature-icon{font-size:41px;flex-shrink:0}.resource-feature h3{font-size:21px;line-height:1.25;margin:4px 0 7px}.resource-feature p{max-width:450px;font-size:12px;line-height:1.5;margin:0;color:#d0f5f0}.resource-feature .section-kicker{color:#9bf0db}.resource-feature-actions{margin-left:auto;display:flex;flex-wrap:wrap;gap:9px;justify-content:flex-end}.resource-feature .button{padding:10px 13px;font-size:11px;min-width:144px;white-space:nowrap}.resource-feature .button-primary{background:#aaf4e5;color:#074f61}.resource-feature .button-outline{background:#147f89;color:#e8faf8;border-color:#4cbbb9}
+.resource-controls input{width:100%;border:1px solid #65c7c7;background:#d1f8f0;min-height:60px;border-radius:15px;padding:0 19px;font-size:15px;color:#124653}.resource-controls input:focus{outline:3px solid #3aadb0;outline-offset:2px}
+.resource-filter{border:1px solid #74c9c9;background:#bff1e9;border-radius:30px;padding:10px 15px;color:#175d68;font-size:12px;font-weight:800}.resource-filter.active{background:#056c7e;color:#ecfffb;border-color:#056c7e}
+.resources-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.resource-card{display:flex;flex-direction:column;min-height:263px;background:#d1f8ed;border:1px solid #7dd3ca;border-radius:18px;padding:22px;box-shadow:0 6px 21px rgba(15,106,117,.075)}
+.resource-card-top{display:flex;justify-content:space-between;align-items:start;gap:10px}.resource-icon{display:grid;place-items:center;background:#9ee8df;border-radius:12px;width:52px;height:52px;font-size:25px}.resource-type{font-size:10px;font-weight:850;color:#166f79;border:1px solid #78cdc7;border-radius:30px;padding:5px 10px}
+.resource-card h3{font-size:18px;line-height:1.25;margin:16px 0 9px}.resource-card p{font-size:12.5px;color:#356f79;line-height:1.64;flex:1;margin:0 0 16px}.resource-card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #9ddfda;padding-top:12px}.resource-card-foot small{font-size:10px;color:#487e7d}.resource-card-foot a{color:#086778;font-size:11px;font-weight:850;white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+.resources-empty{padding:20px;font-weight:700}.fineprint{font-size:11.5px;color:#2d6268;line-height:1.6;margin:21px 0 0}
+.dialog-resource-links{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}.dialog-resource-links>strong{width:100%;font-size:12px}.dialog-resource-links a{display:inline-flex;border:1px solid #78c8c4;background:#b8f0e3;border-radius:9px;padding:8px 11px;font-size:11px;color:#146578;font-weight:750}
+@media(max-width:980px){.contact-grid,.resources-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.resource-feature{flex-wrap:wrap}.resource-feature-actions{margin-left:0;justify-content:flex-start}.brand-logo{width:115px}.desktop-nav{gap:12px}}
+@media(max-width:660px){.brand-logo{width:95px}.hero-logo{max-width:220px}.contact-grid,.resources-grid{grid-template-columns:1fr}.contact-section{padding:44px 0}.resources-section{padding:57px 0}.resource-feature{padding:21px}.resource-feature-actions{flex-direction:column;width:100%}.resource-feature-actions .button{width:100%}.resource-card{min-height:220px}.resource-filter{font-size:11px;padding:10px 12px}.brand small{display:none}}
+
+
+/* v2.1 · Horarios generales de referencia y tarjetas por sector (sin inventar horarios individuales) */
+.hours-section{background:linear-gradient(150deg,#69cfd9 0%,#8be2d9 55%,#a9efdc 100%);padding:65px 0 75px}
+.hours-overview{display:grid;gap:15px;background:#0e6878;color:#e8fffb;border-radius:20px;padding:23px 26px;box-shadow:0 13px 35px rgba(8,88,102,.16)}
+.hours-overview-heading{display:flex;align-items:center;gap:13px}.hours-overview-heading>span{font-size:32px}.hours-overview-heading strong{display:block;font-size:18px}.hours-overview-heading small{display:block;font-size:12px;color:#b7ebea;margin-top:3px}
+.hours-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.hours-summary>div{background:#318e98;border:1px solid #68bdc0;padding:15px 18px;border-radius:13px}.hours-summary span,.hours-summary strong{display:block}.hours-summary span{font-size:12px;color:#ddf7f1}.hours-summary strong{font-size:21px;margin-top:5px;letter-spacing:-.025em}.hours-overview>p{font-size:12px;color:#c7f0ee;margin:0;line-height:1.65}
+.sectors-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:20px 0}
+.sector-card{border-radius:18px;border:1px solid #64c8bf;background:#c8f2e9;padding:23px;min-height:222px;box-shadow:0 9px 23px rgba(11,103,117,.08)}
+.sector-card h3{font-size:19px;margin:16px 0 8px;line-height:1.24}.sector-card>p{font-size:12.5px;color:#356672;margin:0 0 17px;line-height:1.6}.sector-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:24px;background:#e1fcf0;font-size:12px;font-weight:850}.sector-dot{width:12px;height:12px;border-radius:50%;background:#ecc940;box-shadow:0 0 0 2px #9b8124}.sector-azul .sector-dot{background:#2082d0;box-shadow:0 0 0 2px #0860a8}.sector-rojo .sector-dot{background:#d94f58;box-shadow:0 0 0 2px #a72c3b}
+.sector-pending{border-top:1px solid #92d6cf;padding-top:11px;font-size:12px;color:#325e69}.sector-pending strong{color:#8c5416}
+.hours-footnote{font-size:12px;color:#285c67;max-width:790px}.hours-section>.container>.button{margin-top:7px}
+@media(max-width:880px){.sectors-grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.hours-section{padding:47px 0}.hours-overview{padding:19px}.hours-summary{grid-template-columns:1fr}.hours-summary strong{font-size:19px}.sectors-grid{grid-template-columns:1fr}.sector-card{min-height:0}}
+
+
+/* v2.2 Horarios por unidad/servicio, en lugar de subdivisión territorial */
+.service-hours-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:20px 0 19px}
+.service-hours-card{border-radius:18px;border:1px solid #64c8bf;background:linear-gradient(155deg,#b7eee6,#d5f5e9);padding:21px 23px;box-shadow:0 9px 23px rgba(11,103,117,.08);color:#164b58}
+.service-hours-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:#8bddd7;border-radius:13px;font-size:23px}
+.service-hours-card h3{font-size:17px;line-height:1.3;color:#124958;margin:12px 0 12px}
+.service-hours-line{display:flex;gap:12px;justify-content:space-between;border-top:1px solid #88d3ca;padding-top:9px;margin:8px 0;font-size:13px}
+.service-hours-line b{font-weight:750}.service-hours-line span{text-align:right;font-weight:700;max-width:61%}
+.service-hours-card small{display:block;font-size:12px;color:#34636b;line-height:1.55;margin-top:10px}
+@media(max-width:670px){.service-hours-grid{grid-template-columns:1fr}.service-hours-line{font-size:13px}}

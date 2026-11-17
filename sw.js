@@ -1,5 +1,5 @@
-const CACHE = 'cienfuegos-informa-v1';
-const OFFLINE = ['./','./index.html','./styles.css','./app.js','./data.js','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/favicon.png'];
+const CACHE = 'cienfuegos-informa-v2.2';
+const OFFLINE = ['./','./index.html','./styles.css','./app.js','./data.js','./recursos.js','./assets/logo-cesfam-referencia.png','./documentos/calendario-pni-2026.pdf','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/favicon.png'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(OFFLINE)).then(()=>self.skipWaiting()));
 });

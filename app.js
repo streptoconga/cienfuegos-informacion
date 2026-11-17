@@ -1,12 +1,14 @@
 (() => {
   'use strict';
   const data = Array.isArray(window.CIENFUEGOS_CONTENT) ? window.CIENFUEGOS_CONTENT : [];
+  const resources = Array.isArray(window.CIENFUEGOS_RECURSOS) ? window.CIENFUEGOS_RECURSOS : [];
   const $ = (sel) => document.querySelector(sel);
   const grid = $('#cardGrid');
   const input = $('#searchInput');
   const count = $('#resultCount');
   const empty = $('#emptyState');
   let selectedGroup = 'todos';
+  let resourceGroup = 'todos';
   let selectedService = null;
   const readFavorites = () => { try { const arr = JSON.parse(localStorage.getItem('ci-favoritos') || '[]'); return Array.isArray(arr) ? arr : []; } catch { return []; } };
   let favorites = readFavorites();
@@ -58,6 +60,15 @@
     $('#dialogCategory').textContent = s.categoria;
     $('#dialogTitle').textContent = s.nombre;
     $('#dialogDescription').textContent = s.descripcion;
+    const matches = ({
+      infantil:['infancia','crece','pni-vigente'],adolescente:['adolescentes','guias-adolescencia'],mujer:['mujer','lactancia'],adultos:['cardiovascular','copago'],
+      mayores:['mayores','nutricion'],mental:['mental'],vacunatorio:['pni-pdf','pni-vigente'],procedimientos:[],
+      alimentacion:['nutricion'],odontologia:[],some:['inscripcion','afiliacion'],oirs:['oirs','derechos']
+    })[s.id] || [];
+    $('#dialogResources').innerHTML = matches.length ? '<strong>Información nacional relacionada</strong>' + matches.map(id => {
+      const r = resources.find(x => x.id === id);
+      return r ? `<a href="${escapeHTML(r.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(r.nombre)} ↗</a>` : '';
+    }).join('') : '';
     updateFavoriteLabel();
     const dialog = $('#serviceDialog');
     if (typeof dialog.showModal === 'function') dialog.showModal();
@@ -85,7 +96,28 @@
     $('#mobileNav').hidden = true;
     $('#menuBtn').setAttribute('aria-expanded','false');
   }));
+  function renderResources() {
+    const phrase = normalized($('#resourceSearch').value.trim());
+    const items = resources.filter(x => (resourceGroup === 'todos' || x.grupo === resourceGroup) && (!phrase || normalized([x.nombre,x.descripcion,x.fuente,x.grupo].join(' ')).includes(phrase)));
+    $('#resourceCount').textContent = `${items.length} ${items.length===1?'recurso':'recursos'}`;
+    $('#resourceGrid').innerHTML = items.map(x => `
+      <article class="resource-card">
+        <div class="resource-card-top"><span class="resource-icon" aria-hidden="true">${escapeHTML(x.icono)}</span><span class="resource-type">${escapeHTML(x.tipo)}</span></div>
+        <h3>${escapeHTML(x.nombre)}</h3><p>${escapeHTML(x.descripcion)}</p>
+        <div class="resource-card-foot"><small>${escapeHTML(x.fuente)}</small><a href="${escapeHTML(x.url)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir ${escapeHTML(x.nombre)} en su fuente original">Abrir recurso ↗</a></div>
+      </article>`).join('');
+    $('#resourcesEmpty').hidden = items.length>0;
+  }
+  document.querySelectorAll('[data-resource-filter]').forEach(btn => btn.addEventListener('click',()=>{
+    resourceGroup = btn.dataset.resourceFilter;
+    document.querySelectorAll('[data-resource-filter]').forEach(item => {
+      const current = item===btn; item.classList.toggle('active',current); item.setAttribute('aria-pressed',String(current));
+    });
+    renderResources();
+  }));
+  $('#resourceSearch').addEventListener('input',renderResources);
   render();
+  renderResources();
   if('serviceWorker' in navigator && location.protocol !== 'file:') {
     window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
   }
